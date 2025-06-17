@@ -1,6 +1,6 @@
 package dev.ikm.maven.tinkar;
 
-import dev.ikm.maven.toolkit.SimpleTinkarMojo;
+import dev.ikm.maven.toolkit.simple.boundary.SimpleTinkarMojo;
 import dev.ikm.tinkar.common.service.PrimitiveData;
 import dev.ikm.tinkar.common.util.time.DateTimeUtil;
 import dev.ikm.tinkar.composer.Composer;
@@ -33,7 +33,7 @@ import static dev.ikm.tinkar.terms.TinkarTerm.*;
 public class TinkarStarterDataMojo extends SimpleTinkarMojo {
 
     @Override
-    public void run() throws Exception {
+    public void run() {
         EntityService.get().beginLoadPhase();
         try {
             Composer composer = new Composer("Tinkar Starter Data Composer");
